@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TextArea from '../components/TextArea';
 import { processText } from '../utils';
 import Counter from '../components/Counter';
+import Button from '../components/Button';
 
 class Home extends Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class Home extends Component {
     };
     this.textArea = React.createRef();
     this.onChangeText = this.onChangeText.bind(this);
+    this.cleanTextArea = this.cleanTextArea.bind(this);
   }
 
   componentDidMount() {
@@ -28,6 +30,11 @@ class Home extends Component {
     });
   }
 
+  cleanTextArea() {
+    this.textArea.current.input.current.value = '';
+    this.textArea.current.input.current.focus();
+  }
+
   render() {
     return (
       <div className="container">
@@ -36,6 +43,14 @@ class Home extends Component {
           <Counter text="Párrafos" value={this.state.paragraph} />
           <Counter text="Palabras" value={this.state.numWords} />
           <Counter text="Espacios" value={this.state.numSpaces} />
+          <Button
+            button
+            height="30px"
+            alt="Limpiar caja de texto"
+            title="Limpiar caja de texto"
+            src={require('../images/eraser.svg')}
+            onClick={this.cleanTextArea}
+          />
         </div>
         <TextArea ref={this.textArea} className="textareaHome" onChange={this.onChangeText} />
       </div>
