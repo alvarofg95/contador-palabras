@@ -36,3 +36,17 @@ export const processText = text => {
     numSpaces
   };
 };
+
+export const processWord = (text, word) => {
+  let times = 0;
+  let textUpdated = text.toLowerCase();
+  let index = textUpdated.indexOf(word);
+
+  while (index !== -1 && textUpdated.length) {
+    times += 1;
+    textUpdated = textUpdated.substring(index + 1);
+    index = textUpdated.indexOf(word);
+  }
+  console.log({ times });
+  return { times, percent: parseFloat((times / text.length) * 100).toFixed(2) };
+};
