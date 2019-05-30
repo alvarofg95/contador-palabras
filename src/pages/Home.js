@@ -52,7 +52,9 @@ class Home extends Component {
             onClick={this.cleanTextArea}
           />
         </div>
-        <TextArea ref={this.textArea} className="textareaHome" onChange={this.onChangeText} />
+        <div className="borderTextArea">
+          <TextArea ref={this.textArea} className="textareaHome" onChange={this.onChangeText} />
+        </div>
       </div>
     );
   }

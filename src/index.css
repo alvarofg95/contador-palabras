@@ -26,13 +26,16 @@ header {
   margin-bottom: 10px;
 }
 
+.borderTextArea {
+  border: 1px solid;
+  padding: 10px;
+}
+
 .textareaHome {
   width: 100%;
   resize: none;
+  border: none;
   height: 500px;
-  border: 1px solid;
-  padding: 15px;
   font-size: 15px;
-  border-radius: 20px;
   outline: none;
 }

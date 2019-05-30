@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Contador de palabras",
+  "name": "Aplicación Web que analiza un texto introducido por el usuario",
   "icons": [
     {
       "src": "favicon.ico",
