@@ -32,7 +32,14 @@ class Contacto extends Component {
     return (
       <div className="container">
         <h1>Formulario de contacto</h1>
-        <form>
+        <form
+          name="contact"
+          method="post"
+          action="/thanks/"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={this.sendContactData}
+        >
           <input type="hidden" name="form-name" value="contact" />
           <span>Name</span>
           <input ref={this.name} type="text" name="name" />
