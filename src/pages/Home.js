@@ -33,6 +33,7 @@ class Home extends Component {
   cleanTextArea() {
     this.textArea.current.input.current.value = '';
     this.textArea.current.input.current.focus();
+    this.onChangeText();
   }
 
   render() {
