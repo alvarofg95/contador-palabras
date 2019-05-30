@@ -2,7 +2,7 @@ import React from 'react';
 
 export default () => (
   <div>
-    <form name="contact" data-netlify="true">
+    <form name="contact" method="post" data-netlify="true">
       <p>
         <label>
           Name <input type="text" name="name" />
