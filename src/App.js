@@ -6,9 +6,7 @@ import './index.css';
 function App() {
   return (
     <div className="App">
-      <header>
-        <Link to="/">Home</Link>
-      </header>
+      <header />
       <Route exact path="/" component={Home} />
     </div>
   );
