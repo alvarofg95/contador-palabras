@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, withRouter, Link } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import './index.css';
 

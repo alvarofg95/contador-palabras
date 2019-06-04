@@ -47,6 +47,5 @@ export const processWord = (text, word) => {
     textUpdated = textUpdated.substring(index + 1);
     index = textUpdated.indexOf(word);
   }
-  console.log({ times });
   return { times, percent: parseFloat((times / text.length) * 100).toFixed(2) };
 };
