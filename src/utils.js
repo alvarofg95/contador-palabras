@@ -1,4 +1,4 @@
-const specialLetters = [' ', '.', ',', ';', '?', '!', ':'];
+const specialLetters = [' ', '.', ',', ';', '?', '!', ':', '\n'];
 
 export const processText = text => {
   let numCharacters = 0;
@@ -17,10 +17,10 @@ export const processText = text => {
     if (letter !== '\n') {
       numCharacters += 1;
     }
-
     if (
       specialLetters.findIndex(sp => sp === letter) > -1 &&
-      specialLetters.findIndex(sp => sp === letterPost) === -1
+      (specialLetters.findIndex(sp => sp === letterPost) === -1 ||
+        specialLetters.findIndex(sp => sp === letterPrev) === -1)
     ) {
       numWords += 1;
     }
